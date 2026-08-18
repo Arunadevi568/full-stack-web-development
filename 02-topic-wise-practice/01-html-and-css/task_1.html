@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f8fc;
+        }
+
+        header, nav, section, article, footer {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: #004080;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            width: 60%;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 120px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #004080;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>College Information Portal</h1>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#students">Students</a>
+    <a href="#registration">Registration</a>
+</nav>
+
+<section id="about">
+
+<article>
+
+<h2>About Our College</h2>
+
+<p>
+Welcome to <b>ABC Engineering College</b>, one of the leading institutions
+providing quality education in engineering and technology.
+</p>
+
+<p>
+<i>Education is the key to success.</i><br>
+<u>Admissions are open for the academic year.</u><br>
+Water Formula: H<sub>2</sub>O<br>
+Einstein Equation: E = mc<sup>2</sup>
+</p>
+
+<h3>Courses Offered (Ordered List)</h3>
+
+<ol>
+<li>Computer Science Engineering</li>
+<li>Electronics Engineering</li>
+<li>Mechanical Engineering</li>
+<li>Civil Engineering</li>
+</ol>
+
+<h3>Facilities (Unordered List)</h3>
+
+<ul>
+<li>Library</li>
+<li>Computer Labs</li>
+<li>Sports Complex</li>
+<li>Hostel</li>
+</ul>
+
+<h3>Useful Links</h3>
+
+<p>
+<a href="https://www.examplecollege.edu" target="_blank">
+College Website
+</a>
+</p>
+
+<p>
+<a href="https://www.google.com" target="_blank">
+Google
+</a>
+</p>
+
+</article>
+
+</section>
+
+<section id="students">
+
+<h2>Student Details</h2>
+
+<table>
+
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Branch</th>
+<th>Email</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>CSE</td>
+<td>rahul@gmail.com</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Anjali</td>
+<td>ECE</td>
+<td>anjali@gmail.com</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Arun</td>
+<td>MECH</td>
+<td>arun@gmail.com</td>
+</tr>
+
+</table>
+
+<h2>College Images</h2>
+
+<img src="college_logo.png"
+     alt="College Logo"
+     width="150">
+
+<br><br>
+
+<img src="college_building.jpg"
+     alt="College Building"
+     width="450">
+
+</section>
+
+<section id="registration">
+
+<h2>Student Registration Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Password</label>
+<input type="password">
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Age</label>
+<input type="number" min="16" max="60">
+
+<label>Favorite Color</label>
+<input type="color">
+
+<label>Programming Skill</label>
+<input type="range" min="0" max="100">
+
+<label>Gender</label><br>
+
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+
+<br><br>
+
+<label>Hobbies</label><br>
+
+<input type="checkbox"> Reading
+<input type="checkbox"> Sports
+<input type="checkbox"> Music
+
+<br><br>
+
+<label>Branch</label>
+
+<select>
+
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>CIVIL</option>
+
+</select>
+
+<label>Comments</label>
+
+<textarea rows="5"></textarea>
+
+<br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Audio</h2>
+
+<audio controls>
+<source src="college_song.mp3" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+
+<h2>Video</h2>
+
+<video width="400" controls>
+<source src="college_video.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
+</section>
+
+<footer>
+
+<p>&copy; 2026 ABC Engineering College. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

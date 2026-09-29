@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>college portal</title>
+</head>
+<body>
+<header>
+    <h1>ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1>
+    <p>Empowering Minds Since 2001</p>
+</header>
+<nav>
+    <a href="#about">About</a> |
+    <a href="#students">Students</a> |
+    <a href="#registration">Registration</a> |
+    <a href="#media">Media</a>
+  </nav>
+  <!-- ========== PART A: BASIC HTML ========== -->
+  <section id="about">
+    <article>
+      <h2>About the College</h2>
+      <p>
+        ABC College of Engineering was established in <b>1998</b> and is
+        affiliated with the State Technical University. Our motto is
+        <i>"Knowledge for Progress"</i> and we focus on building
+        <u>industry-ready professionals</u>.
+      </p>
+      <!-- Superscript / Subscript demo -->
+      <p>
+        Chemical formula of water: H<sub>2</sub>O.
+        This is our founder's 100<sup>th</sup> birth anniversary.
+      </p>
+      <h3>Departments Offered (Unordered List)</h3>
+      <ul>
+        <li>Computer Science Engineering</li>
+        <li>Electronics &amp; Communication</li>
+        <li>Mechanical Engineering</li>
+      </ul>
+      <h3>Admission Procedure (Ordered List)</h3>
+      <ol>
+        <li>Fill the online application form</li>
+        <li>Appear for the entrance examination</li>
+        <li>Complete document verification</li>
+        <li>Pay admission fees</li>
+      </ol>
+      <p>
+        Visit our
+        <a href="https://www.anits.org" target="_blank">College Website</a>
+        or search on
+        <a href="https://www.google.com" target="_blank">Google</a>
+        for more information.
+      </p>
+    </article>
+  </section>
+  <section id="students">
+    <h2>Student Details</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Branch</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>a24126552257</td>
+          <td>sravya</td>
+          <td>CSm</td>
+          <td>sravya@example.com</td>
+        </tr>
+        <tr>
+          <td>a24126552258</td>
+          <td>Priya Sharma</td>
+          <td>csm</td>
+          <td>priya@example.com</td>
+        </tr>
+        <tr>
+          <td>a24126552259</td>
+          <td>Rahul Verma</td>
+          <td>csm</td>
+          <td>rahul@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>College Gallery</h3>
+    <!-- alt text ensures accessibility and shows if image fails to load -->
+    <img src="college-logo.png" alt="ABC College Logo" width="120" height="120">
+    <img src="campus.jpg" alt="Front view of ABC College Campus" width="300" height="200">
+  </section>
+  <section id="registration">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="studentName" placeholder="Enter your full name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="studentEmail" placeholder="you@example.com" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="studentPassword" required><br><br>
+      <!-- Radio Buttons: only one option selectable -->
+      <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </fieldset><br>
+      <!-- Checkboxes: multiple options selectable -->
+      <fieldset>
+        <legend>Hobbies</legend>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="hobbies" value="music">
+        <label for="music">Music</label>
+      </fieldset><br>
+      <label for="branch">Branch:</label>
+      <select id="branch" name="branch">
+        <option value="cse">Computer Science</option>
+        <option value="ece">Electronics</option>
+        <option value="mech">Mechanical</option>
+      </select><br><br>
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Any additional remarks..."></textarea><br><br>
+      <!-- ========== PART D: HTML5 INPUT TYPES ========== -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="16" max="60"><br><br>
+      <label for="favColor">Favourite Color:</label>
+      <input type="color" id="favColor" name="favcolor"><br><br>
+      <label for="satisfaction">Satisfaction Level:</label>
+      <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </section>
+  <!-- ========== PART D: SEMANTIC + MULTIMEDIA ========== -->
+  <section id="media">
+    <h2>Campus Media</h2>
+    <h3>Audio</h3>
+    <audio controls>
+      <source src="college-anthem.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h3>Video</h3>
+    <video width="400" controls>
+      <source src="campus-tour.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <!-- ========== FOOTER (Semantic Element) ========== -->
+  <footer>
+    <p>&copy; 2026 ABC College of Engineering. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px gray;
+        }
+
+        input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        #addButton {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #eeeeee;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .complete {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+            opacity: 0.6;
+        }
+
+        #emptyMessage {
+            color: gray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>My To-Do List</h1>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a task..."
+        >
+
+        <button id="addButton">Add Task</button>
+
+        <p id="emptyMessage">No tasks available.</p>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script>
+
+        // Select DOM elements
+        const taskInput = document.getElementById("taskInput");
+        const addButton = document.getElementById("addButton");
+        const taskList = document.getElementById("taskList");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        // Add Task Event
+        addButton.addEventListener("click", function () {
+
+            // Get task value
+            const taskText = taskInput.value.trim();
+
+            // Check if input is empty
+            if (taskText === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            // Create new list item
+            const taskItem = document.createElement("li");
+
+            // Create task text
+            const taskName = document.createElement("span");
+            taskName.textContent = taskText;
+
+            // Create Complete Button
+            const completeButton = document.createElement("button");
+            completeButton.textContent = "Complete";
+            completeButton.className = "complete";
+
+            // Complete button event
+            completeButton.addEventListener("click", function () {
+                taskName.classList.toggle("completed");
+            });
+
+            // Create Delete Button
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.className = "delete";
+
+            // Delete button event
+            deleteButton.addEventListener("click", function () {
+                taskItem.remove();
+                checkEmptyList();
+            });
+
+            // Add elements to list item
+            taskItem.appendChild(taskName);
+            taskItem.appendChild(completeButton);
+            taskItem.appendChild(deleteButton);
+
+            // Add task to webpage
+            taskList.appendChild(taskItem);
+
+            // Clear input box
+            taskInput.value = "";
+
+            // Update empty message
+            checkEmptyList();
+
+        });
+
+        // Function to check if task list is empty
+        function checkEmptyList() {
+
+            if (taskList.children.length === 0) {
+                emptyMessage.style.display = "block";
+            } else {
+                emptyMessage.style.display = "none";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
